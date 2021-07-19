@@ -1,9 +1,8 @@
-// import React, { Component } from "react";
+import React, { Component } from "react";
 
-// // import "modern-normalize";
-// import "./styles.css";
+import "modern-normalize";
+import "./styles.css";
 
-// // class App extends Component {
-// // }
+class App extends Component {}
 
-// export default App;
+export default App;
