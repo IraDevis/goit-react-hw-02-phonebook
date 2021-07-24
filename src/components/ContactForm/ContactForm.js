@@ -1,6 +1,8 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
 
+import styles from "./ContactForm.module.css";
+
 class ContactForm extends Component {
   static propTypes = {
     onSubmit: PropTypes.func.isRequired,
@@ -26,9 +28,10 @@ class ContactForm extends Component {
     return (
       <>
         <form onSubmit={this.handleSubmit}>
-          <label>
+          <label className={styles.formLabel}>
             Name
             <input
+              className={styles.formInput}
               type="text"
               name="name"
               pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -38,9 +41,10 @@ class ContactForm extends Component {
               value={this.state.name}
             />
           </label>
-          <label>
+          <label className={styles.formLabel}>
             Number
             <input
+              className={styles.formInput}
               type="tel"
               name="number"
               pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"

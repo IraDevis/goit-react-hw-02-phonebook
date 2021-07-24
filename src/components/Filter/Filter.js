@@ -1,6 +1,8 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
 
+import styles from "./Filter.module.css";
+
 class Filter extends Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
@@ -10,9 +12,10 @@ class Filter extends Component {
   render() {
     return (
       <>
-        <label>
+        <label className={styles.label}>
           Find by name
           <input
+            className={styles.input}
             type="text"
             value={this.props.value}
             onChange={this.props.onChange}
